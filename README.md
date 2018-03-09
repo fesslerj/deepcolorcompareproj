@@ -37,4 +37,4 @@ Neural networks are a fascinating area of computer research where progress is co
  12. *Colorful Image Colorization.* Zhang, Richard, et al., 2016, [richzhang.github.io/colorization](https://richzhang.github.io/colorization/). Accessed 8 Mar. 2018.
  13. *Image-to-Image Translation with Conditional Adversarial Networks.* UC Berkeley, 2017, [phillipi.github.io/pix2pix](https://phillipi.github.io/pix2pix/). Accessed 8 Mar. 2018.
  14. *Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.* 2018, [github.com/tensorlayer/srgan](https://github.com/tensorlayer/srgan). Accessed 8 Mar. 2018.
- 
+ 15. Ronneberger, Olaf, et al. "U-Net: Convolutional Networks for Biomedical Image Segmentation." *18th International Conference on Medical Image Computing and Computer-Assisted Intervention, Munich, Germany, 5-9 Oct. 2015*, vol. 3, pp. 234-241. *SpringerLink*, [link.springer.com/book/10.1007%2F978-3-319-24553-9](https://link.springer.com/book/10.1007%2F978-3-319-24553-9). Accessed 8 Mar. 2018. 
