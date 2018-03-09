@@ -11,17 +11,17 @@ This is an exploration and comparison of different approaches to achieve automat
 ### 5. [Other Neural Artwork Processes](Other.md)
 ### 6. Glossary
 
-GAN -
+* **ANN** - Artificial Neural Network: A network of interconnected virtual pseudo-neurons used for computer learning processes.
+* **DNN** - Deep Neural Network: An ANN which has one or more "hidden" layers of nodes in between its input and output layers
+* **CNN** - Convolutional Neural Network: A type of DNN where nodes apply convolutional operations to their inputs.
+* **GAN** - Generative Adversarial Network: A type of CNN that uses two components, a discriminator (or image classifier) and a generator.
+* **U-Net** - GAN structure where the generator component consists of an overlapped encoder and decoder structure, linked with skip connections.
 
-CNN -
+### 7. Conclusion
 
-Anime -
+Neural networks are a fascinating area of computer research where progress is constantly still being made. The challenge of applying neural networks to image processing tasks is already considerable, let alone trying to use those neural networks for the purposes of creating art. However, it seems there exists a suite of possible neural network designs and implementations that are ready to be used for these purposes. Convolutional Neural Networks and Conditional Generative Adversarial Networks are capable of taking a grayscale image and producing a fully colorized output; some of these network types have also been used for "super resolution" upscaling of low-resolution images. With the continuous progress being made in this field, it seems inevitable that new designs will come out that beat the performance of these methods. However, CNNs and cGANs already provide thoroughly plausible results and could become important tools for aspiring artists.
 
-Neural Network -
-
-Deep Neural Network -
-
-### 7. References
+### 8. References
 
  1. Cheng, Zezhou, et al. “Colorization Using Neural Network Ensemble.” IEEE Transactions On Image Processing, vol. 26, no. 11, 2017, pp. 5491–5505. IEEE Xplore, doi:10.1109/TIP.2017.2740620. Accessed 30 Jan. 2018.
  2. Nguyen, Tung, et al. “Image Colorization Using a Deep Convolutional Neural Network.” Proc. of ASIAGRAPH 2016, Toyama, Japan, 5-6 Mar. 2016, pp. 49-50. Cornell University Library, arXiv:1604.07904. Accessed 30 Jan. 2018.
