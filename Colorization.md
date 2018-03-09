@@ -28,16 +28,21 @@ The implementation of this, pix2pix, was implemented in Lua using Torch, Nvidia 
 
 ## Auxiliary Classifier Generative Adversarial Networks
 
-A more recently-popularized approach attempts to build on top of the cGAN approach with an auxiliary classifier, producing the AC-GAN. Compared to the former, AC-GAN produces output which is relatively impressive, but with a design and implementation that is relatively inscrutable. The basic idea is that the AC-GAN utilizes an auxiliary classifier component, the output of which is introduced at the middle of the U-Net; additionally, two guide decoders are utilized both immediately prior to, and immediately after, this auxiliary input in order to stabilize the loss across certain U-Net layers (seemingly).
+A more recently-popularized approach attempts to build on top of the cGAN approach with an auxiliary classifier, producing the AC-GAN. Compared to the former, AC-GAN produces output which is relatively impressive, but with a design and implementation that is relatively inscrutable. The basic idea is that the AC-GAN utilizes an auxiliary classifier component, the output of which is introduced at the middle of the U-Net[4]; additionally, two guide decoders are utilized both immediately prior to, and immediately after, this auxiliary input in order to stabilize the loss across certain U-Net layers (seemingly).
 
 The implementation of this, style2paints, was implemented in Python using Tensorflow, Keras, OpenCV and Scikit. Due to the unavailability of the reference implementation at the time of this writing, and the degree of difficulty in instantiating and training it manually, results will not be included for this method in the Comparisons section.
 
 ## Cycle-Consistent Generative Adversarial Networks
 
-Another more recent approach attempts to transform the cGAN approach to work towards translating images between two domains. Cycle-consistent GANs (CycleGANs) utilize two different discriminators and two different generators (“mapping functions”) which map images from one domain to another domain, or vice-versa. This approach shows great promise for various art-related purposes. Further exploration may be necessary to show whether or not this method can be adapted towards image colorization specifically.
+Another more recent approach attempts to transform the cGAN approach to work towards translating images between two domains. Cycle-consistent GANs (CycleGANs) utilize two different discriminators and two different generators (“mapping functions”) which map images from one domain to another domain, or vice-versa[5]. This approach shows great promise for various art-related purposes. Further exploration may be necessary to show whether or not this method can be adapted towards image colorization specifically.
 
 The implementation for this, CycleGAN, was written in Lua using Torch, Nvidia CUDA, and Nvidia CuDNN. Due to the difficulty of instantiating and training it manually as well as time constraints in general and lack of availability of an online instance of the reference implementation, results will not be included for this method in the Comparisons section. Additionally, it would seem that much work needs to be done for CycleGAN to be ready for image colorization in the first place.
 
-# References
+## References
 
-...
+ 1. Zhang, Richard, et al. "Colorful Image Colorization." *Cornell University Library*, [arXiv:1603.08511](https://arxiv.org/abs/1603.08511). Accessed 8 Mar. 2018.
+ 2. Isola, Phillip, et al. “Image-to-Image Translation with Conditional Adversarial Networks.” *Cornell University Library*, [arXiv:1611.07004](https://arxiv.org/abs/1611.07004). Accessed 8 Feb. 2018.
+ 3. Ronneberger, Olaf, et al. "U-Net: Convolutional Networks for Biomedical Image Segmentation." *18th International Conference on Medical Image Computing and Computer-Assisted Intervention, Munich, Germany, 5-9 Oct. 2015*, vol. 3, pp. 234-241. *SpringerLink*, [link.springer.com/book/10.1007%2F978-3-319-24553-9](https://link.springer.com/book/10.1007%2F978-3-319-24553-9). Accessed 8 Mar. 2018.
+ 4. Zhang, Lvmin, et al. “Style Transfer for Anime Sketches with Enhanced Residual U-net and Auxiliary Classifier GAN.” *Cornell University Library*, [arXiv:1706.03319](https://arxiv.org/abs/1706.03319). Accessed 8 Feb. 2018.
+ 5. Zhu, Jun-Yan, et al. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks." *Cornell University Library*, [arXiv:1703.10593](https://arxiv.org/abs/1703.10593]). Accessed 8 Mar. 2018.
+ 
