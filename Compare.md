@@ -6,11 +6,23 @@ That said, here is a comparison of various methods of colorizing sketches and dr
 
 ## Convolutional Neural Network Results
 
+![Photographic Example](photo-example.png)
+
+*{other example WIP}*
+
 The CNN approach indeed succeeds at applying color to grayscale images. When properly trained, this method is certainly capable of producing some plausible, and even impressive-looking, results. There are a few drawbacks, however. One is a lack of color coherence: simply put, the CNN may make several different choices for similar features in the same image. This can be seen most easily in the photographic example included above, by studying the network’s choice of colors for the people in Fig. %. Next is the previously-mentioned failure mode of CNNs, in that results can sometimes be blurry or grayish. Blurred colors are strongly evident in all of these examples, including how the colors “bleed” outside of the character’s outline in Fig. %, and how the sepia-brown color washes across much of the top-middle of the middle of the photograph in Fig. %. Graying is also evident in the photograph, as the entire top edge of Fig. % is gray or uncolored.
 
 It is likely possible to achieve even more satisfactory results with a CNN by more carefully training an implementation to a dataset (that is suitable for colorizing sketches and drawings, for instance). However, these issues are evident (albeit not guaranteed) even on the photographic example, which was produced on such a carefully-trained CNN.
 
 ## Conditional Generative Adversarial Network Results
+
+![Original Image](maxresdefault.jpg)
+Original Image (credit: Silver Link / Sentai Filmworks)
+
+Input | Output
+------|-------
+![Lines](mitsu-line-2.png) Input Linemap | ![Colored](mistu-noinput.png) Output Colorized (No Hints)
+![Colormap](mitsu-trackpad.png) Input with Color Hints | ![Colored](mitsu-final.png) Output Colorized (with Hints)
 
 The cGAN approach produces vivid but often semi-blurry colors. Almost all cGAN examples that were tested produced colored images that resembled watercolor paintings: Selected color tones were often muted, and colors blended smoothly with one another - sometimes even across obvious outlines or borders. These results do illustrate one failure mode: An inconsistency of choices similar to CNNs (in that similar features in the same image may be colored differently), although the effect of this is often much more limited than with the CNN approach, making cGAN perhaps the more successful in this respect. Additionally, as predicted in the literature, cGANS do not seem as susceptible to grayish results or to producing large single-colored (or uncolored) areas, as was seen in the CNN approach.
 
