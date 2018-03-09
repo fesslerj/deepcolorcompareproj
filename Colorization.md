@@ -1,0 +1,43 @@
+# Colorization with Neural Networks
+
+With the development and popularization of more advanced machine learning techniques, it was perhaps only a matter of time before these machine learning methods were applied to aid in the creation of art. By the 2010’s, image processing in computers was commonplace, and the applications of using techniques like neural networks to automatically classify images were being heavily explored, so the natural next step would be the generation of images. Coloring a black-and-white image, specifically, seems to have been a popular target as of late. There are several techniques in the literature for generating colored (or “colorized”) versions of black-and-white images; what follows is an explanation of several of them.
+
+## Explanation of Deep Neural Networks
+
+*Some knowledge of Artificial Neural Networks and Deep Neural Networks is required to understand much of the terminology that I present here. The section that follows is a quick explanation of Deep Neural Networks. This author makes no assurance that this explanation alone will suffice for those previously unaware of these concepts, and is concerned with providing this explanation more for the purpose of review than of teaching. There exist many good resources in book and web form to explain the subject more thoroughly and effectively.*
+
+A popular and effective branch of computer learning in the past decade is Artificial Neural Networks (ANNs). An ANN is a structured collection of nodes which are artificial representations of neurons; neurons take input signals, modulate them by some nonlinear function and produce an output signal. Neurons are typically weighted, and as the network of neurons “learns” these weights are adjusted. ANNs are further classified as Deep Neural Networks (DNNs) if they have one or more “hidden” layer of neurons between the input and output layers, which is not directly used as either input or output.
+
+## Convolutional Neural Networks
+
+One such method is to use a Convolutional Neural Network (CNN). A CNN is a DNN which includes convolutional layers - i.e. layers which apply some convolution to their inputs. As CNNs had been put to successful use in image processing applications such as image classification, they have seemed a natural choice to use towards image colorization.
+
+The method considered here is the “Colorful Image Colorization” approach[1]. This paper specifies a method of using Convolutional Neural Networks for colorizing grayscale images. In particular, this paper includes the stated goal of producing a “plausible” result - that is, one which could conceivably fool a human observer.
+
+Their proposed archetypal network structure is simple. From an initial input layer, about 8 “conv” layer blocks are included which progressively downsample the image, and eventually upsample it over the course of the final 2-3 layer blocks. The process operated using the grayscale input image as the “L” or “Lightness” channel of a Lab-colorspace image; the output is the a and b channels, so by recombining the output (ab) with the input (L), the final image (Lab) is produced.
+
+The results of this method are evaluated in the “Comparisons” section. Further work has noted several difficulties with using CNNs, however, and these will be addressed here. One weakness of using Convolutional Neural Networks for image colorization has been noted as follows: Since CNNs function by learning to minimize some loss function, extreme care must be taken when choosing that loss function so as to make the network learn useful information. In particular, any obvious or simple loss functions tend to behave sub-optimally. Also, the failure of CNNs can often be seen as blurry or gray-ish colors. Coming up with loss functions which cause the network to output useful information (that is, colorized images with sharp details and realistic colors) is known to be an open problem: It generally requires expert knowledge, and there may well be no perfect choice[2].
+
+## Conditional Generative Adversarial Networks
+
+Another method is to use a conditional Generative Adversarial Network[2]. A Generative Adversarial Network, or GAN, is a kind of neural network which is actually composed of two competing components: A generator and a discriminator. The discriminator is trained to correctly choose between true output values from the training dataset and fakes produced by the generator component. Meanwhile, the generator is trained to produce output values which can fool the discriminator. Ideally, the pair are trained towards attaining an increasing rate of error from the discriminator. Orthodox GANs have been used in image colorization techniques[2]; however, they suffer from the fact that their output is unstructured: Each output pixel of an image is conditionally independent from all other pixels in the output.
+
+Conditional GANs (cGANs) learn a structured loss, which penalizes the joint configuration of the entire output. This requires both the discriminator and the generator to have access to the input, unlike an orthodox GAN. The progenitorial work in this class, as described in the Image-to-Image paper[2] and implemented in the pix2pix suite, uses several additional architectural distinctions. One is a U-Net type of architecture[3] for the generator component: a pair of overlaid components, one functioning as an encoder and the other as a decoder, with skip connections between their mirrored layers to prevent information bottlenecking and preserve low-level information. The other is a PatchGAN discriminator[2]. This was designed to solve issues with previous models wherein certain types of information loss result in generated images with poor high-frequency resolution. (High frequency components of an image include noise, small objects and other small or fine details, as opposed to low-frequency components which include simpler or larger-scale features.) This discriminator type aims to classify if each NxN patch in an image is fake or not, for some value of N. When combined with a low-frequency component, this produces better results in the high-frequency components.
+
+The implementation of this, pix2pix, was implemented in Lua using Torch, Nvidia CUDA, and Nvidia CuDNN. Many derivative implementations based on pix2pix also exist, which have been implemented in a variety of languages including Tensorflow.
+
+## Auxiliary Classifier Generative Adversarial Networks
+
+A more recently-popularized approach attempts to build on top of the cGAN approach with an auxiliary classifier, producing the AC-GAN. Compared to the former, AC-GAN produces output which is relatively impressive, but with a design and implementation that is relatively inscrutable. The basic idea is that the AC-GAN utilizes an auxiliary classifier component, the output of which is introduced at the middle of the U-Net; additionally, two guide decoders are utilized both immediately prior to, and immediately after, this auxiliary input in order to stabilize the loss across certain U-Net layers (seemingly).
+
+The implementation of this, style2paints, was implemented in Python using Tensorflow, Keras, OpenCV and Scikit. Due to the unavailability of the reference implementation at the time of this writing, and the degree of difficulty in instantiating and training it manually, results will not be included for this method in the Comparisons section.
+
+## Cycle-Consistent Generative Adversarial Networks
+
+Another more recent approach attempts to transform the cGAN approach to work towards translating images between two domains. Cycle-consistent GANs (CycleGANs) utilize two different discriminators and two different generators (“mapping functions”) which map images from one domain to another domain, or vice-versa. This approach shows great promise for various art-related purposes. Further exploration may be necessary to show whether or not this method can be adapted towards image colorization specifically.
+
+The implementation for this, CycleGAN, was written in Lua using Torch, Nvidia CUDA, and Nvidia CuDNN. Due to the difficulty of instantiating and training it manually as well as time constraints in general and lack of availability of an online instance of the reference implementation, results will not be included for this method in the Comparisons section. Additionally, it would seem that much work needs to be done for CycleGAN to be ready for image colorization in the first place.
+
+# References
+
+...
