@@ -23,10 +23,18 @@ Neural networks are a fascinating area of computer research where progress is co
 
 ### 8. References
 
- 1. Cheng, Zezhou, et al. “Colorization Using Neural Network Ensemble.” IEEE Transactions On Image Processing, vol. 26, no. 11, 2017, pp. 5491–5505. IEEE Xplore, doi:10.1109/TIP.2017.2740620. Accessed 30 Jan. 2018.
- 2. Nguyen, Tung, et al. “Image Colorization Using a Deep Convolutional Neural Network.” Proc. of ASIAGRAPH 2016, Toyama, Japan, 5-6 Mar. 2016, pp. 49-50. Cornell University Library, arXiv:1604.07904. Accessed 30 Jan. 2018.
- 3. Liang, Xiangguo, et al. “Deep Patch-Wise Colorization Model for Grayscale Images.” SIGGRAPH ASIA 2016 Technical Briefs, Macao, pp. 1–4. ACM Digital Library, doi:10.1145/3005358.3005375. Accessed 30 Jan. 2018.
- 4. Zhang, Richard, et al. “Real-Time User-Guided Image Colorization with Learned Deep Priors.” ACM Transactions on Graphics (TOG), vol. 36, no. 4, 20 July 2017, pp. 1–11. ACM Digital Library, doi:10.1145/3072959.3073703. Accessed 30 Jan. 2018.
- 5. Dong, Chao, et al. “Image Super-Resolution Using Deep Convolutional Networks.” IEEE Transactions On Pattern Analysis and Machine Intelligence, vol. 38, no. 2, 2016, pp. 295–307. Cornell University Library, arXiv:1501.00092. Accessed 30 Jan. 2018.
- 6. Isola, Phillip, et al. “Image-to-Image Translation with Conditional Adversarial Networks.” Cornell University Library, arXiv:1611.07004. Accessed 8 Feb. 2018.
- 7. Zhang, Lvmin, et al. “Style Transfer for Anime Sketches with Enhanced Residual U-net and Auxiliary Classifier GAN.” Cornell University Library, arXiv:1706.03319. Accessed 8 Feb. 2018.
+ 1. Cheng, Zezhou, et al. “Colorization Using Neural Network Ensemble.” *IEEE Transactions On Image Processing*, vol. 26, no. 11, 2017, pp. 5491–5505. *IEEE Xplore*, [doi:10.1109/TIP.2017.2740620](http://ieeexplore.ieee.org/document/8011494/). Accessed 30 Jan. 2018.
+ 2. Nguyen, Tung, et al. “Image Colorization Using a Deep Convolutional Neural Network.” *Proc. of ASIAGRAPH 2016, Toyama, Japan*, 5-6 Mar. 2016, pp. 49-50. *Cornell University Library*, [arXiv:1604.07904](https://arxiv.org/abs/1604.07904). Accessed 30 Jan. 2018.
+ 3. Liang, Xiangguo, et al. “Deep Patch-Wise Colorization Model for Grayscale Images.” *SIGGRAPH ASIA 2016 Technical Briefs, Macao*, pp. 1–4. *ACM Digital Library*, [doi:10.1145/3005358.3005375](https://dl.acm.org/citation.cfm?doid=3005358.3005375). Accessed 30 Jan. 2018.
+ 4. Zhang, Richard, et al. “Real-Time User-Guided Image Colorization with Learned Deep Priors.” *ACM Transactions on Graphics (TOG)*, vol. 36, no. 4, 20 July 2017, pp. 1–11. *ACM Digital Library*, [doi:10.1145/3072959.3073703](https://dl.acm.org/citation.cfm?doid=3072959.3073703). Accessed 30 Jan. 2018.
+ 5. Dong, Chao, et al. “Image Super-Resolution Using Deep Convolutional Networks.” *IEEE Transactions On Pattern Analysis and Machine Intelligence*, vol. 38, no. 2, 2016, pp. 295–307. *Cornell University Library*, [arXiv:1501.00092](https://arxiv.org/abs/1501.00092). Accessed 30 Jan. 2018.
+ 6. Isola, Phillip, et al. “Image-to-Image Translation with Conditional Adversarial Networks.” *Cornell University Library*, [arXiv:1611.07004](https://arxiv.org/abs/1611.07004). Accessed 8 Feb. 2018.
+ 7. Zhang, Lvmin, et al. “Style Transfer for Anime Sketches with Enhanced Residual U-net and Auxiliary Classifier GAN.” *Cornell University Library*, [arXiv:1706.03319](https://arxiv.org/abs/1706.03319). Accessed 8 Feb. 2018.
+ 8. "Doug's Great Demo: 1968." *Doug Engelbart Institute.* Doug Engelbart Institute, 2018, [www.dougengelbart.org/firsts/dougs-1968-demo.html](http://www.dougengelbart.org/firsts/dougs-1968-demo.html). Accessed 8 Mar. 2018.
+ 9. Zhu, Jun-Yan, et al. "Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks." *Cornell University Library*, [arXiv:1703.10593](https://arxiv.org/abs/1703.10593]). Accessed 8 Mar. 2018.
+ 10. Ledig, Christian, et al. "Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network." *Cornell University Library*, [arXiv:1609.04802](https://arxiv.org/abs/1609.04802). Accessed 8 Mar. 2018.
+ 11. Zhang, Richard, et al. "Colorful Image Colorization." *Cornell University Library*, [arXiv:1603.08511](https://arxiv.org/abs/1603.08511). Accessed 8 Mar. 2018.
+ 12. *Colorful Image Colorization.* Zhang, Richard, et al., 2016, [richzhang.github.io/colorization](https://richzhang.github.io/colorization/). Accessed 8 Mar. 2018.
+ 13. *Image-to-Image Translation with Conditional Adversarial Networks.* UC Berkeley, 2017, [phillipi.github.io/pix2pix](https://phillipi.github.io/pix2pix/). Accessed 8 Mar. 2018.
+ 14. *Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network.* 2018, [github.com/tensorlayer/srgan](https://github.com/tensorlayer/srgan). Accessed 8 Mar. 2018.
+ 
