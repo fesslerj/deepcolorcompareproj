@@ -10,6 +10,7 @@ That said, here is a comparison of various methods of colorizing sketches and dr
 Fig. 1 *(Image Source: [1])*
 
 ![Original Image](mako2.png)
+
 Fig. 2 *Original Image (Image Credit: [Sushio / Trigger Inc.](https://imgur.com/gallery/nWKo4))*
 
 Input | Output
