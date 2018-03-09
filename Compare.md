@@ -32,6 +32,12 @@ Both of the methods are capable of producing plausible results. However, the cGA
 
 Of course, it isn’t that CNNs *can’t* be used to effectively colorize images. Although this author was unable to reproduce any, several examples on the website of the CNN implementation that was used which look particularly convincing. However, it seems clear that cGANs are simply more suited for the task of colorizing images than CNNs are.
 
+## Performance and Implementation Notes
+
+Running and training a neural network can be difficult. Of the reviewed implementations and many more, few were truly easy to get to run; many were also not easily trained to the point of usability. Due to time constraints, it was not possible to properly evaluate the difficulty of running and training every method. Several methods were considered for evaluation, notably the AC-GAN and CycleGAN methods, but were disconsidered from inclusion due to the difficulty of running them, the difficulty of obtaining ideal datasets to train them on, and the lack of an available and accessible online implementation. In particular, the AC-GAN seems to be capable of producing even better output than the cGAN method, but demonstrating and evaluating it effectively was impossible. 
+
+The CycleGAN approach produces very convincing output for certain domains, but it remains to be seen if it can be successfully adapted to colorizing images. Example images created from CycleGANs used for this exist, but there does not appear to be any public implementation of this.
+
 # References
 
 ...
