@@ -9,8 +9,12 @@ That said, here is a comparison of various methods of colorizing sketches and dr
 ![Photographic Example](photo-example.png)
 *(Image Source: [1])*
 
-*{other example WIP}*
-*(Image Credit: [Sushio / Trigger Inc.](https://imgur.com/gallery/nWKo4))*
+![Original Image](mako2.png)
+*Original Image (Image Credit: [Sushio / Trigger Inc.](https://imgur.com/gallery/nWKo4))*
+
+Input | Output
+------|-------
+![Grayscale](mako2-bw2.png) Input Grayscale | ![Output Colorized](mako-cnn.png) Output Colorized
 
 The CNN approach indeed succeeds at applying color to grayscale images. When properly trained, this method is certainly capable of producing some plausible, and even impressive-looking, results. There are a few drawbacks, however. One is a lack of color coherence: simply put, the CNN may make several different choices for similar features in the same image. This can be seen most easily in the photographic example included above, by studying the network’s choice of colors for the people in Fig. %. Next is the previously-mentioned failure mode of CNNs, in that results can sometimes be blurry or grayish. Blurred colors are strongly evident in all of these examples, including how the colors “bleed” outside of the character’s outline in Fig. %, and how the sepia-brown color washes across much of the top-middle of the middle of the photograph in Fig. %. Graying is also evident in the photograph, as the entire top edge of Fig. % is gray or uncolored.
 
